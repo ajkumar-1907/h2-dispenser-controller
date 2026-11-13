@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "Anuj Kumar",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-st-nucleo-c031c6",
+      "id": "nucleo",
+      "top": 10.43,
+      "left": 171.82,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -164.5,
+      "left": 38.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "$serialMonitor:TX",
+      "nucleo:PA3",
+      "",
+      []
+    ],
+    [
+      "$serialMonitor:RX",
+      "nucleo:PA2",
+      "",
+      []
+    ],
+    [
+      "pot1:SIG",
+      "nucleo:PA0",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "nucleo:3V3.1",
+      "pot1:VCC",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "nucleo:GND.2",
+      "pot1:GND",
+      "black",
+      [
+        "h0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,6 @@
+tests/test_main
+tests/scenarios
+__pycache__/
+*.o
+build/
+.vscode/
